@@ -1,0 +1,81 @@
+:root {
+    --green: #15803d;
+  }
+  
+  .apropos {
+    background-color: aliceblue;
+    width: 100%;
+    overflow: hidden; /* Ensure that .apropos section contains its floated children */
+  }
+  
+  
+/* hfdussssssssssapi */
+.apropos #hr {
+    margin-top: 120px; /* Adjust the margin-top as needed */
+    margin-left : -20px; /* Adjust the margin-top as needed */
+    margin-top: 20px; /* Adjust the margin-top as needed */
+    width: 30%;
+    border-top: 4px solid var(--green);; /* Example rule: sets a gray, 2px solid border */
+   
+  }
+  
+  
+  .apropos h1 {
+    float: left;
+    background-color: aliceblue;
+    color: var(--green);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .aboutP {
+    float: left;
+    font-size: 15px;
+    width:50%; /* Adjust width to fit content */
+    margin-left: -270px;
+    margin-top: 40px;
+    text-align: justify ;
+  }
+  
+  /* image styling */
+  .sideImg {
+    float: right;
+    width: 40%;
+  }
+
+  .apropos .aboutP span{
+    color: var(--green);
+    font-weight: 600;
+    font-size: 15px;
+  }
+  
+    /* administration part styling */
+
+    .corps-administrale h1{
+        font-weight: bold;
+        font-size: 25px;
+        color: var(--green);
+    }
+.corps-administrale  #administration-menbers{
+    font-size: 15px;
+    justify-content: center;
+    text-align: justify;
+    width: 60%;
+}
+
+
+  
+  /* footer styling */
+  footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0; 
+    position: relative;
+    bottom: 0;
+  }
+  
+ 
+ 

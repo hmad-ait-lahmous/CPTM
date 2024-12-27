@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* video styling */
+.home .video-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.home .video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+.home .video-container video { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: reverse;
+}
+.content h1{
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+}
+
+
+
+/* hhhhhhhhhhhhhhhhhhhhhh */
+
+/* text inside video stylin g */
+
+
+
+.missionP {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* end  */
+
+
+/* our mission intro p style */
+
+
+.mission h1 {
+    color: var(--green);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+.mission {
+   
+    width: 65%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  margin-left: 20%;
+}
+
+.missionP {
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: justify;
+}
+
+.sideImg {
+    width: 30%;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.mission .missionP span {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+
+/* hhhhhhhhhhhhhhhhhhhhh */
+/* style our mission sections */
+.our-mission-container {
+    display: flex;
+    margin:2%;
+    
+}
+.our-mission1{
+margin-right: 2%;
+margin-left: 0.5%;
+
+}
+
+
+.our-mission1, .our-mission2 {
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+}
+.our-mission2{
+    margin-left: 2%;
+    width: 50%;
+    
+    }
+.our-mission2 p{
+    font-size: 15px;
+    font-weight: 400;
+    }
+.our-mission1 h1, .our-mission2 h1 {
+    color: var(--green);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cptm_objectif, .cptm_action {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.our-mission {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 2%;
+    margin-right: 2%;
+}
+
+.our-mission h1 {
+    float: left;
+    margin-top: 5px;
+    color: var(--green);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.our-mission p {
+    width: 90%;
+    text-align: justify;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+li{
+    text-align: justify;
+    line-height: 2;
+    font-size: 14px;
+    
+}
+
+
+
+/* intro paragraph pour information pratique  */
+
+
+
+.cptm_mission1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.mission1 {
+    order: 2; /* Move the paragraph section to the right */
+    background-color: azure;
+    width: 65%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.mission1 h1 {
+    color: var(--green);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.missionP1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.missionP1 {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+
+}
+/*  */
+
+.sideImg1 {
+    order: 1; /* Move the image to the left */
+    width: 30%;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.mission1 .missionP1 span {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    text-align: justify;
+}

@@ -1,0 +1,186 @@
+:root {
+  --green: #15803d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden; 
+}
+
+header {
+  width: 100%;
+}
+
+ 
+/* home section style  */
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.home .content h3 {
+  font-size: 2rem;
+  color: #333;
+}
+.home .controls {
+  margin: 20px 0;
+}
+
+.home .controls .vid-btn {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.home .video-container {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.home .video-container video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.home .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: reverse;
+}
+
+
+
+/* Contact Page Styles */
+.contact_page h3, .intro_p h3 {
+  text-align: center;
+  color: var(--green);
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.contact_page p, .intro_p p {
+  line-height: 1.6;
+  text-align: center;
+  font-size: 13px;
+}
+
+.info_direct ul {
+  padding: 0;
+  text-align: center;
+}
+
+.info_direct ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  
+  list-style:none;
+}
+
+.localisation p {
+  text-align: center;
+  font-size:15px;
+  margin-top: 5px;
+}
+
+/* Form Styles */
+.contact_page, .intro_p, .pop {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form.formC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.formC h2 {
+  margin-bottom: 20px;
+  font-size:30px ;
+  font-weight: bold;
+  font-family: "Roboto",sans-serif;
+  color:var(--green);
+}
+
+form.formC label {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  font-weight: bold;
+  color: #555;
+  font-size: 15px;
+}
+form.formC input[type="text"],
+form.formC input[type="email"],
+form.formC input[type="tel"],
+form.formC select,
+form.formC textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+form.formC input[type="submit"] {
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+form.formC input[type="submit"]:hover {
+  background-color: var(--green);
+}
+
+/* image styling next to form */
+.logo-img {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  
+}
+
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+}
+
+
