@@ -114,7 +114,7 @@
           // Output HTML content for each row
           echo '<div class="box">';
           echo '<div class="image-container">';
-          echo '<img src="' . $row['imageURL'] . '" alt="' . $row['imageName'] . '" />';
+          echo '<img src="' . '" alt="' . $row['imageName'] . '" />';
           echo '</div>';
           echo '<div class="content">';
           echo '<h3><span>' . substr($row['imageName'], 0, 1) . '</span>' . substr($row['imageName'], 1) . '</h3>';
