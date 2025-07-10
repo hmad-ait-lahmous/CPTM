@@ -1,129 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evenements</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Événements - Province Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contact_hotel.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/events.css" />
 </head>
-
 <body>
-    <!-- Header Start -->
+    <!-- Header -->
     <header>
-        <!-- NavBar Start -->
         <?php include 'includes/navbar.html'; ?>
-        <!-- NavBar End -->
     </header>
-    <!-- Header End -->
 
-    <!-- Home Section Start -->
-    <section class="home" id="home">
-        <div class="content">
-            <h3>Découvrez les Événements à Venir : Rejoignez l'Excitation !</h3>
-            <p>Découvrez les événements incontournables de la saison et ne manquez aucune occasion de vous divertir !</p>
-        </div>
-
-        <div class="controls">
-            <snap class="vid-btn active" data-src="Assets/Home pic.jpg"></snap>
-            <snap class="vid-btn" data-src="Assets/img-1.jpg"></snap>
-            <snap class="vid-btn" data-src="Assets/img-2.jpg"></snap>
-            <snap class="vid-btn" data-src="Assets/img-3.jpg"></snap>
-            <snap class="vid-btn" data-src="Assets/img-4.jpg"></snap>
-        </div>
-
-        <div class="video-container">
-            <img src="Assets/Home pic.jpg" id="video-slider"></img>
-        </div>
-    </section>
-    <!-- Home Section End -->
-
-    <!-- Title Start -->
-    <section id="title">
-        <h1>Les Evenements</h1>
-    </section>
-    <!-- Title End -->
-
-    <?php
-    // Include the database connection file
-    include 'php/db_connect.php';
-
-    // Fetch hotel records from the database
-    $sql = "SELECT * FROM events";
-    $result = $conn->query($sql);
-
-    // Check if there are any records
-    if ($result->num_rows > 0) {
-        // Initialize counter
-        $counter = 0;
-
-        // Output each hotel record as HTML
-        while ($row = $result->fetch_assoc()) {
-            // Open a new row div every third hotel
-            if ($counter % 3 == 0) {
-                echo '<div class="row">';
+    <!-- Hero Section -->
+    <section class="hero-slider">
+        <div class="slides-container">
+            <?php
+            include 'php/db_connect.php';
+            
+            // Fetch events for hero slider
+            $heroSql = "SELECT imageURL FROM events LIMIT 4";
+            $heroResult = $conn->query($heroSql);
+            $heroImages = [];
+            
+            if ($heroResult->num_rows > 0) {
+                while ($row = $heroResult->fetch_assoc()) {
+                    $heroImages[] = $row['imageURL'];
+                }
+            } else {
+                // Default images if no events found
+                $heroImages = [
+                    "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                ];
             }
-
-            // Output hotel HTML
-            echo '<section class="hotels">';
-            echo '<div class="hotel1-container">';
-            echo '<div class="hotel1">';
-            echo '<div class="image-container">';
-            echo '<img src="' . $row['imageURL'] . '" />';
-            echo '</div>';
-            echo '<div class="hotel1_content">';
-            echo '<h3>' . $row['eventName'] . '</h3>';
-            echo '<a style="text-transform: none;" class="hotel_email">';
-            echo '<h4>' . $row['eventDate'] . '</h4>';
-            echo '</a>';
-            echo '<h4 style="font-size: 10px; font-weight: bold;">' . $row['eventLocation'] . '</h4>';
-            echo '<button class="show-more-btn">show more</button>';
-            echo '</div>';
-            echo '<div class="more-info" style="display: none;">';
-            echo '<h4>' . $row['eventName'] . '</h4>' . $row['eventDesc'] . '<br>';
-            echo '<a target="_blank" href="' . $row['eventMapLocation'] . '" class="Localisation" style="text-decoration: none;">';
-            echo '<h4>Direction</h4>';
-            echo '</a>';
-            echo '</div>';
-
-            echo '</div>';
-            echo '</div>';
-            echo '</section>';
-
-            // Close the row div every third hotel
-            if (($counter + 1) % 3 == 0) {
+             
+            foreach ($heroImages as $index => $image) {
+                $activeClass = $index === 0 ? "active" : "";
+                echo '<div class="slide ' . $activeClass . '">';
+                echo '<img src="' . $image . '" alt="Event Image">';
                 echo '</div>';
             }
+            ?>
+            <div class="slider-overlay"></div>
+            <div class="slider-content">
+                <h1>Découvrez les événements de la province de Midelt</h1>
+            </div>
+        </div>
+        <div class="controls">
+            <?php
+            foreach ($heroImages as $index => $image) {
+                $activeClass = $index === 0 ? "active" : "";
+                echo '<div class="slider-dot ' . $activeClass . '" data-index="' . $index . '"></div>';
+            }
+            ?>
+        </div>
+    </section>
+    
+    <!-- Section Title -->
+    <section id="title">
+        <h1>Les Événements</h1>
+    </section>
 
-            // Increment counter
-            $counter++;
-        }
-
-        // Close the row div if the number of hotels is not a multiple of 3
-        if ($counter % 3 != 0) {
-            echo '</div>';
-        }
-    } else {
-        echo '<div class="no-hotel-found">';
-        echo '<h4>No Event Found!</h4>';
-        echo '<p>We couldn\'t find any events. Please try again or check back later.</p>';
-        echo '</div>';
-    }
-
-    // Close the database connection
-    $conn->close();
-    ?>
-
+    <!-- Events Section -->
+    <div class="events-container">
+        <div class="events-grid">
+            <?php
+            // Fetch event records from the database
+            $sql = "SELECT * FROM events";
+            $result = $conn->query($sql);
+            
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="event-card">';
+                    echo '<div class="image-container">';
+                    echo '<img src="' . $row['imageURL'] . '" alt="' . $row['eventName'] . '" />';
+                    echo '</div>';
+                    echo '<div class="event-content">';
+                    echo '<div class="event-header">';
+                    echo '<h3><span>É</span>' . $row['eventName'] . '</h3>';
+                    echo '<span class="event-date-badge">' . date('Y-m-d', strtotime($row['eventDate'])) . '</span>';
+                    echo '</div>';
+                    echo '<span class="event-location"><i class="fas fa-map-marker-alt event-icon"></i>' . $row['eventLocation'] . '</span>';
+                    echo '<button class="show-more-btn">Voir plus</button>';
+                    echo '</div>';
+                    echo '<div class="event-info">';
+                    echo '<h4>' . $row['eventName'] . '</h4>';
+                    echo '<p>' . $row['eventDesc'] . '</p>';
+                    echo '<a target="_blank" href="' . $row['eventMapLocation'] . '" class="event-direction">';
+                    echo '<i class="fas fa-map-marker-alt"></i> Voir sur la carte';
+                    echo '</a>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo '<div class="no-event-found" style="grid-column: 1 / -1;">';
+                echo '<h4>Aucun événement trouvé!</h4>';
+                echo '<p>Nous n\'avons trouvé aucun événement à venir. Veuillez réessayer plus tard.</p>';
+                echo '</div>';
+            }
+            
+            $conn->close();
+            ?>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <?php include 'includes/footer.html'; ?>
+    <footer>
+        <?php include 'includes/footer.html'; ?>
+    </footer>
 
-
-    <script src="js/contact-hotel.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/events.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
-
 </html>

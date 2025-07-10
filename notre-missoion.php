@@ -7,8 +7,11 @@
     <title>Notre Mission</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <link rel="stylesheet" href="css/notre-mission.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+
 </head>
 
 <body>
@@ -27,11 +30,11 @@
             <h1>NOTRE MISSION</h1>
         </div>
     
-        <div class="controls">
+        <!-- <div class="controls">
             <snap class="vid-btn active" data-src="Assets/videos/Sequence 02_1.mp4"></snap>
             <snap class="vid-btn" data-src="Assets/videos/Sequence 02_1.mp4"></snap>
             <snap class="vid-btn" data-src="Assets/videos/Sequence 02_1.mp4"></snap>
-        </div>
+        </div> -->
     
         <div class="video-container">
             <video src="Assets/videos/siteweb video.mp4" id="video-slider" loop autoplay muted></video>
@@ -100,6 +103,7 @@
     <?php
     include 'includes/footer.html';
     ?>
+    <script src="js/navbar.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/contacter-nous.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  
 
   
 </head>
@@ -31,10 +33,6 @@
         <h1>Nous contacter</h1>
         <a href="#form"><button id="contact-btn">Formulaire de contact</button></a>
         <h4>Conseille Provincial de tourisme Midelt</h4>
-      </div>
-
-      <div class="video-container">
-       
       </div>
     </section>
 
@@ -150,6 +148,7 @@
   <script src="js/script.js"></script>
   <script src="js/formulaire.js"></script>
   <script src="js/alerts/adherentAdded.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 
 </html>

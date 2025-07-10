@@ -1,268 +1,439 @@
+/* contacter-nous.css */
+/* Réutilisation des variables du thème */
 :root {
-    --green: #15803d;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+    --primary: #15803d;
+    --primary-dark: #0c5a2a;
+    --secondary: #f8f9fa;
+    --accent: #ffa500;
+    --text: #333;
+    --text-light: #6c757d;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+/* Section Hero */
+.home {
+    position: relative;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden; 
-  }
-  
-  header {
-    width: 100%;
-  }
-  
-   
-  /* home section style  */
-  .home {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .home .content h3 {
-    font-size: 2rem;
-    color: #333;
-  }
-  .home .controls {
-    margin: 20px 0;
-  }
-  
-  .home .controls .vid-btn {
-    display: inline-block;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .home .video-container {
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .home .video-container video {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .home .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: reverse;
-  }
-  
-  
-  
-  /* Contact Page Styles */
-  .contact_page h3, .intro_p h3 {
-    text-align: center;
-    color: var(--green);
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .contact_page p, .intro_p p {
-    line-height: 1.6;
-    text-align: center;
-    font-size: 13px;
-  }
-  
-  .info_direct ul {
-    padding: 0;
-    text-align: center;
-  }
-  
-  .info_direct ul li {
-    margin-bottom: 10px;
-    font-size: 15px;
-    
-    list-style:none;
-  }
-  
-  .localisation p {
-    text-align: center;
-    font-size:15px;
-    margin-top: 5px;
-  }
-  
-  /* Form Styles */
-  .contact_page, .intro_p, .pop {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-  }
-  form.formC {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-   
-  }
-  
-  form.formC h2 {
-    margin-bottom: 20px;
-    font-size:30px ;
-    font-weight: bold;
-    font-family: "Roboto",sans-serif;
-    color:var(--green);
-  }
-  
-  form.formC label {
-    width: 100%;
-    max-width: 600px;
-    text-align: left;
-    font-weight: bold;
-    color: #555;
-    font-size: 15px;
-  }
-  form.formC input[type="text"],
-  form.formC input[type="email"],
-  form.formC input[type="tel"],
-  form.formC select,
-  form.formC textarea {
-    width: 100%;
-    max-width: 600px;
-    padding: 10px;
-    margin-top: 2px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 12px;
-  }
-  
-  form.formC input[type="submit"] {
-    background-color: var(--green);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 2.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 12px;
-  }
-  
-  form.formC input[type="submit"]:hover {
-    background-color: var(--green);
-  }
-  
-  /* image styling next to form */
-  .logo-img {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070') no-repeat center center/cover;
+    color: var(--white);
+    padding: 2rem;
+    margin-top: 90px;
     
-  }
-  
-
-  .row1 {
-    margin-top: -60px;
-    display: flex;
-    align-items: center; /* Vertically center the content */
-    gap: 3%; /* Optional: Adds space between the image and the paragraph */
-}
-.row {
-    
-    display: flex;
-    align-items: center; /* Vertically center the content */
-    gap: 3%; /* Optional: Adds space between the image and the paragraph */
-}
-#d{
-    font-weight: bold;
-}
-#img_d {
-    width: 50%; /* The image takes up 30% of the row width */
-     /* Ensures the image doesn't exceed its container */
-    height: 100%; /* Maintains the aspect ratio of the image */
-    margin-top: -3%;
 }
 
-#img_d_p {
-    width:  46%; 
-    float: left;
-    text-align: justify;
-    margin-bottom: 5%;
-    margin-top: 15%;
+.content {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    /* margin-top: 1130px; */
 }
 
-/*  */
-#img_d2 {
-    width: 50%;
-    height: 100%;
+.content h1 {
+    font-size: 5.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
-#img_d_p2 {
-    width:  46%; 
-    float: left;
-    margin: 0; 
-    text-align: justify;
-    margin-bottom: 5%;
+.content h4 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-  
-
-
+#cpt {
+    color: var(--accent);
+    font-weight: 700;
+}
 
 #contact-btn {
-    background-color: var(--green);
-    color: #fff;
+    background: var(--primary);
+    color: var(--white);
     border: none;
-    padding: 20px 30px;
-    border-radius: 5px;
-    font-size: 4rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 12px;
-  }
+    transition: var(--transition);
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
-  .content h1{
-    font-size: 60px;
-  }
-  .content h4{
-    font-size: 20px;
-  }
-  #cpt{
-    font-size: 50px;
-    font-weight: bold;
-  }
-  .toTop{
-    margin-top: -50px;
-  }
+#contact-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
 
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
 
-  /* Footer Styles */
-  footer {
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.col-sm {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Section Espace Client */
+.contact_page {
+    background: var(--secondary);
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    height: 100%;
+}
+
+.contact_page h3 {
+    font-size: 3.2rem;
+    color: var(--primary);
+    margin-bottom: 3rem;
     position: relative;
-    bottom: 0;
-  }
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
 
-  
-  
-  
-  
+.contact_page h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.row1, .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: flex-start;
+}
+
+#img_d, #img_d2 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+#img_d_p, #img_d_p2 {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: var(--text);
+    flex: 1;
+    min-width: 250px;
+}
+
+#d {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#cptm {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Sections d'information */
+.info_direct, .localisation {
+    margin-top: 4rem;
+}
+
+.info_direct h3, .localisation h3 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.info_direct h3::after, .localisation h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.info_direct ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info_direct li {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: var(--text);
+}
+
+.info_direct li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.localisation p {
+    font-size: 1.8rem;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
+
+#link_to_cptm a {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+#link_to_cptm a:hover {
+    color: var(--primary-dark);
+    background: rgba(21, 128, 61, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Section Formulaire */
+.pop {
+    background: var(--secondary);
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.formC {
+    display: flex;
+    flex-direction: column;
+}
+
+.formC h2 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.formC h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.formC label {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    color: var(--text);
+    display: block;
+}
+
+.formC input,
+.formC select,
+.formC textarea {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
+    transition: var(--transition);
+    background: var(--white);
+    width: 100%;
+}
+
+.formC input:focus,
+.formC select:focus,
+.formC textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.2);
+}
+
+.formC textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.formC input[type="submit"] {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.formC input[type="submit"]:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    html {
+        font-size: 58%;
+    }
+    
+    .home {
+        height: 50vh;
+    }
+    
+    .content h1 {
+        font-size: 4.5rem;
+    }
+    
+    .contact_page,
+    .pop {
+        padding: 3rem;
+    }
+    
+    .row1, .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #img_d, #img_d2 {
+        margin: 0 auto 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        height: 40vh;
+    }
+    
+    .content h1 {
+        font-size: 3.8rem;
+    }
+    
+    .content h4 {
+        font-size: 1.8rem;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-sm {
+        width: 100%;
+    }
+    
+    .contact_page,
+    .pop {
+        padding: 2.5rem;
+    }
+    
+    .formC h2 {
+        font-size: 3rem;
+    }
+    
+    .contact_page h3 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home {
+        height: 35vh;
+    }
+    
+    .content h1 {
+        font-size: 3.2rem;
+    }
+    
+    .content h4 {
+        font-size: 1.6rem;
+    }
+    
+    #contact-btn {
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+    }
+    
+    .contact_page,
+    .pop {
+        padding: 2rem;
+    }
+    
+    .contact_page h3,
+    .formC h2 {
+        font-size: 2.5rem;
+    }
+    
+    .contact_page p,
+    .info_direct li,
+    .localisation p,
+    .formC label,
+    #img_d_p, #img_d_p2 {
+        font-size: 1.6rem;
+    }
+    
+    .formC input,
+    .formC select,
+    .formC textarea {
+        font-size: 1.6rem;
+        padding: 1.2rem;
+    }
+    
+    .formC input[type="submit"] {
+        font-size: 1.8rem;
+        padding: 1.2rem;
+    }
+    
+    #img_d, #img_d2 {
+        width: 100px;
+        height: 100px;
+    }
+}
