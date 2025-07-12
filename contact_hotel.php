@@ -16,13 +16,11 @@
 
 <body>
     <!-- Header -->
-     <header>
+   <header>
       <?php
-  include 'includes/navbar.html';
-  require 'php/db_connect.php';
+  include 'navbar.php';
   ?>
-  </header>
-
+</header>
     <!-- Hero Section avec Slider -->
     <section class="hero-slider">
         <div class="slides-container">

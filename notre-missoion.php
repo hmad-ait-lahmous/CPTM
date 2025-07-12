@@ -19,7 +19,7 @@
     <header>
         <!-- NavBar Start -->
         <?php
-        include 'includes/navbar.html';
+        include 'navbar.php';
         ?>
         <!-- NavBar End -->
     </header>

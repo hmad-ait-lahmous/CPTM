@@ -14,7 +14,7 @@
 <body>
     <!-- Header -->
     <header>
-        <?php include 'includes/navbar.html'; ?>
+        <?php include 'navbar.php'; ?>
     </header>
 
     <!-- Hero Section -->

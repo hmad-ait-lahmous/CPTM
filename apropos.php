@@ -18,7 +18,7 @@
     <!-- Header Start -->
   
   <?php
-  include 'includes/navbar.html';
+  include 'navbar.php';
   require 'php/db_connect.php';
   ?>
     <!-- Header End -->

@@ -15,7 +15,7 @@
 
 <body>
     <!-- Inclusion de la navbar -->
-    <?php include 'includes/navbar.html'; ?>
+    <?php include 'navbar.php'; ?>
 
     <section class="home" id="home">
         <div class="content">

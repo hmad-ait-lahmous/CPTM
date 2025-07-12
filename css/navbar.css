@@ -137,6 +137,7 @@ header.sticky {
   .navbar-container {
     padding: 0 1.5rem;
   }
+
   
   .nav-links {
     position: fixed;
@@ -195,5 +196,6 @@ header.sticky {
   
   .nav-links .has-dropdown + .dropdown.active {
     display: flex;
+    
   }
 }
