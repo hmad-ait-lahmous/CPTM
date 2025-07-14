@@ -16,13 +16,12 @@
 
 <body>
     <!-- Header Start -->
-    <header>
-        <!-- NavBar Start -->
-        <?php
-        include 'navbar.php';
-        ?>
-        <!-- NavBar End -->
-    </header>
+  <header>
+      <?php
+  include './includes/navbar.html';
+  require 'php/db_connect.php';
+  ?>
+  </header>
     <!-- Header End -->
 
     <section class="home" id="home">

@@ -15,8 +15,12 @@
 
 <body>
     <!-- Inclusion de la navbar -->
-    <?php include 'navbar.php'; ?>
-
+    <header>
+      <?php
+  include './includes/navbar.html';
+  require 'php/db_connect.php';
+  ?>
+  </header>
     <section class="home" id="home">
         <div class="content">
             <h1>INFORMATION PRATIQUE</h1>

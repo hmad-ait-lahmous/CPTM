@@ -16,11 +16,12 @@
 
 <body>
     <!-- Header -->
-   <header>
+  <header>
       <?php
-  include 'navbar.php';
+  include './includes/navbar.html';
+  
   ?>
-</header>
+  </header>
     <!-- Hero Section avec Slider -->
     <section class="hero-slider">
         <div class="slides-container">

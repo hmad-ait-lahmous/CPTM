@@ -1,33 +1,76 @@
-<header>
-  <div class="navbar-container">
-    <a href="index.php" class="logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./css/navbar.css"> -->
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="menu-icons">
+                   <i class="fas fa-bars"></i>
+                   <i class="fas fa-times"></i>
+                </div>
+                <a href="index.php" class="logo">
       <img src="Assets/logo cpt.png" alt="CPTM Logo">
-    </a>
+        </a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">Qui somme nous <i class="fas fa-caret-down"></i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="./index.php#quisommenous">qui somme nous</a>
+                            </li>
+                            <li>
+                                <a href="apropos.php">À propos
+                                    <!-- <i class="fas fa-caret-down"></i></a> -->
+                            </li>
+                           <li>
+                                <a href="notre-missoion.php">Notre Mission</a>
+                            </li>
+                            <li>
+                                <a href="formulaire.php">Adhérer au CPTM</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
 
-    <ul class="nav-links">
-      <li> 
-        <a href="#" class="has-dropdown">QUI SOMMES-NOUS</a>
-        <ul class="dropdown">
-          <li><a href="index.php#quisomenous">QUI SOMMES-NOUS</a></li>
-          <li><a href="apropos.php">À propos</a></li>
-          <li><a href="notre-missoion.php">Notre Mission</a></li>
-          <li><a target="_blank" href="formulaire.php">Adhérer au CPTM</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" class="has-dropdown">NOS OUTILS</a>
-        <ul class="dropdown">
-          <li><a target="_blank" href="https://visitmidelt.com/">Visit Midelt</a></li>
-          <li><a href="infoPratique.php">Informations Pratiques</a></li>
-        </ul>
-      </li>
-      <li><a href="contact_hotel.php">CONTACTEZ HÔTEL</a></li>
-      <li><a href="contacter-nous.php">CONTACTEZ NOUS</a></li>
-      <li><a href="events.php">ÉVÉNEMENTS</a></li>
-    </ul>
+                    <li>
+                        <a href="">NOS OUTILS <i class="fas fa-caret-down"></i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a target="_blank" href="https://visitmidelt.com/">Visit Midelt</a>
+                            </li>
+                            <li>
+                                <a href="infoPratique.php">Informations Pratiques</a>
+                                    <!-- <i class="fas fa-caret-down"></i></a> -->
+                            </li>
+                            
+                        </ul>
+                    </li>
 
-    <div class="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
-  </div>
-</header>
+                    <li>
+                       <a href="contact_hotel.php">CONTACTEZ HÔTEL</a>
+                    </li>
+                    <li>
+                        <a href="contacter-nous.php">CONTACTEZ NOUS</a>                     
+                    </li>
+                    <li>
+                        <a href="events.php">ÉVÉNEMENTS</a>
+                    </li>
+                  <li class="move-right">
+                    <a href="formulaire.php" class="btn">Adhérer au CPTM</a>
+                </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <script src="./js/navbar.js"></script>
+</body>
+</html>

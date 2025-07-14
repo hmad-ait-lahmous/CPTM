@@ -13,9 +13,12 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <?php include 'navbar.php'; ?>
-    </header>
+   <header>
+      <?php
+  include './includes/navbar.html';
+//   require 'php/db_connect.php';
+  ?>
+  </header>
 
     <!-- Hero Section -->
     <section class="hero-slider">

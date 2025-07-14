@@ -7,7 +7,7 @@
   <title>CPTM - Conseil Provincial Tourisme Midelt</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   
   
   <link rel="stylesheet" href="css/footer.css">
@@ -20,7 +20,7 @@
   
   <header>
       <?php
-  include 'navbar.php';
+  include './includes/navbar.html';
   require 'php/db_connect.php';
   ?>
   </header>
@@ -30,7 +30,7 @@
     <div class="hero-content">
       <h1>Espace des Professionnels du tourisme à Midelt</h1>
       <p>Découvrez un espace conçu spécialement pour répondre à vos besoins et vous accompagner dans le développement de vos activités touristiques.</p>
-      <a href="#about" class="btn">Découvrir plus <i class="fas fa-arrow-right"></i></a>
+      <a href="#quisommenous" class="btn">Découvrir plus <i class="fas fa-arrow-right"></i></a>
     </div>
     
     <div class="controls">
@@ -44,9 +44,9 @@
   </section>
 
   <!-- About Section -->
-  <section class="about section-padding" id="quisomenous">
+  <section class="about section-padding" id="quisommenous">
     <div class="container">
-      <h2 class="heading">QUI SOMMES-NOUS</h2>
+      <h2 class="heading" id="" >QUI SOMMES-NOUS</h2>
       
       <div class="about-content">
         <div class="about-img">
@@ -241,9 +241,9 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
-  <script src="js/script.js"></script>
   <script src="js/PopOut.js"></script>
-  <script src="js/navbar.js"></script>
+  
+  <script src="js/script.js"></script>
 
 </body>
 </html>

@@ -17,10 +17,12 @@
 <body>
     <!-- Header Start -->
   
-  <?php
-  include 'navbar.php';
+  <header>
+      <?php
+  include './includes/navbar.html';
   require 'php/db_connect.php';
   ?>
+  </header>
     <!-- Header End -->
 
     <section class="hero" id="home">

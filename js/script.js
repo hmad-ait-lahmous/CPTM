@@ -1,21 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Navigation
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                hamburger.innerHTML = navLinks.classList.contains('active') ? 
-                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-            });
-            
-            // Close mobile menu when clicking a link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-                });
-            });
             
             // Hero slider controls
             const vidBtns = document.querySelectorAll('.vid-btn');
@@ -54,17 +37,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+
+                // Empêcher le scroll uniquement si l'ancre est valide
+                if (href.length > 1) {
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
+                    const target = document.querySelector(href);
                     if (target) {
                         target.scrollIntoView({
                             behavior: 'smooth'
                         });
                     }
-                });
+                }
             });
+        });
+
             
             // Sticky header
             window.addEventListener('scroll', () => {
